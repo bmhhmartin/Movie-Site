@@ -20,8 +20,8 @@ const Header =()=>{
             { cartShow && <CartDetails cartModalClose={()=>{setCartShow(false)}}></CartDetails>}
             <header>
                 <nav className="container flex items-center justify-between space-x-10 py-6">
-                    <a href="index.html">
-                        <h2>MovieSite</h2>
+                    <a href="/">
+                        <h2 className="text-center text-[#1e73ff] lg:text-[20px] mb-8 font-bold">MovieSite</h2>
                     </a>
 
                     <ul className="flex items-center space-x-5">

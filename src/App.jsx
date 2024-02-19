@@ -1,21 +1,22 @@
+
+
 import { useState } from "react";
-import Footer from "../src/components/Footer";
-import Header from "../src/components/Header";
-import MainComponent from "./components/MainComponent";
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoute from './Route/AppRoute';
 import MovieContext from "./context";
 
-const App =()=>{
 
-  const [cartData, setCartData] = useState([]);
-
+const App = () => {
+    const [cartData, setCartData] = useState([]);
   return (
-    <>
+    <div>
       <MovieContext.Provider value={{cartData, setCartData}}>
-        <Header></Header>
-        <MainComponent></MainComponent>
-        <Footer></Footer>
+        <Router>
+          <AppRoute></AppRoute>
+        </Router>
       </MovieContext.Provider>
-    </>
-  )
-}
+    </div>
+  );
+};
+
 export default App;

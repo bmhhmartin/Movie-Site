@@ -45,7 +45,7 @@ const CartDetails =({cartModalClose})=>{
                                 </div>
                             </div>
                             <div className="flex justify-between gap-4 items-center">
-                                <button onClick={(e)=>handleDeleteCart(e, item.id)} className="bg-[#D42967] rounded-md p-2 md:px-4 inline-flex items-center space-x-2 text-white">
+                                <button onClick={(e)=>handleDeleteCart(e, item.id)} className="bg-[#ff3c3c] rounded-md p-2 md:px-4 inline-flex items-center space-x-2 text-white">
                                     <img className="w-5 h-5" src={Delete} alt="Delete Icon" />
                                     <span className="max-md:hidden">Remove</span>
                                 </button>
@@ -57,7 +57,7 @@ const CartDetails =({cartModalClose})=>{
 
                     {/* submit part */}
                     <div className="flex items-center justify-end gap-2">
-                        <button className="rounded-md p-2 md:px-4 inline-flex items-center space-x-2 bg-primary text-[#171923] text-sm" href="#">
+                        <button className="rounded-md p-2 md:px-4 inline-flex items-center space-x-2 bg-primary/50 text-[#171923] text-sm" disabled={cartData.length > 0 ? '' : 'disabled'}>
                             <img src={Checkout} width="24" height="24" alt=""/>
                             <span>Checkout</span>
                         </button>
