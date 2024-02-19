@@ -5,7 +5,6 @@ import MovieCard from "./MovieCard";
 const MainComponent = ()=> {
 
     const movies = getAllMovies();
-    console.log(movies);
     
 
     return (
